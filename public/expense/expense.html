@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="expense.css" />
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+    <title>Expense Tracker</title>
+  </head>
+  <body>
+    <div class="header">
+      <h2>Day to Day Expenses</h2>
+      <div class="links">
+        <div class="navlink logout">
+          <a href="/public/login/login.html">Logout</a>
+        </div>
+        <div class="navlink premium">
+          <button class="premiumBtn">Premium</button>
+        </div>
+        <div class="navlink lederboard">
+          <a href="/public/lederboard/lederboard.html">Lederboard</a>
+        </div>
+        <div class="navlink expenseRenavlink">
+          <a href="/public/expenseReport/expenseReport.html">Expense Report</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="summary">
+      <span class="date">07 February, 2022 - Monday</span>
+      <span class="savings">Savings: ₹0.00</span>
+    </div>
+
+    <div class="income-expense">
+      <div class="income">
+        <h3>Total Income</h3>
+        <input type="number" id="total-income" placeholder="₹0.00" />
+        <button type="submit" class="addIncomeBtn">Add Income</button>
+      </div>
+      <div class="expense">
+        <h3>Total Expense</h3>
+        <p class="total-expense">"₹0.00"</p>
+      </div>
+    </div>
+    <!-- Items here -->
+    <div class="items">
+      <div class="item">
+        <!-- dynamic  expense list-->
+      </div>
+    </div>
+
+    <button class="openModal">+</button>
+    <div class="modal">
+      <div class="modal-content">
+        <span class="close">×</span>
+        <form>
+          <div>
+            <label for="amount">Choose expense amount</label>
+            <input type="number" id="amount" />
+          </div>
+          <div>
+            <label for="description">Choose description</label>
+            <input type="text" id="description" required />
+          </div>
+          <label for="category">Choose category</label>
+          <select id="category">
+            <option selected>select category</option>
+            <option value="fuel">fuel</option>
+            <option value="food">food</option>
+            <option value="electricity">electricity</option>
+            <option value="travel">travel</option>
+            <option value="movie">movie</option>
+          </select>
+          <button type="submit" class="addExpenseBtn">Add Expense</button>
+        </form>
+      </div>
+    </div>
+    <!-- pagination populated here-->
+    <div class="= pagination-container">
+      <span id="pagination"></span>
+      <span id="rowContainer">
+        <label for="rows-per-page">row per page:</label>
+        <select name="rows" id="rows-per-page">
+          <option value="10">10</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+      </span>
+    </div>
+  </body>
+  <script src="expense.js"></script>
+  <script src="purchase.js"></script>
+  <!-- Include SweetAlert2 CSS and JS from CDN -->
+  <linkrel
+    ="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</html>

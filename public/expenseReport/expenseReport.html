@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Report</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Day to Day Expenses</h1>
+     <a href="/public/expense/expense.html">Back</a>
+      <table id="expense-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Expense</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+          <!-- Data will be populated here by JavaScript -->
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">Total Income</td>
+            <td id="total-income"></td>
+            <td id="total-expense"></td>
+          </tr>
+          <tr>
+            <td colspan="2">Savings</td>
+            <td colspan="2" id="savings"></td>
+          </tr>
+        </tfoot>
+      </table>
+      <div class = "btn">
+        <button id="download-btn" disabled>Download</button> 
+       <button id="history-btn" disabled>Download History</button>
+      </div>
+      <!-- download histoy populate here-->
+      <ul class="list"></ul>
+      <p class="message">Showing 100 latest entries</p>
+    </div>
+  </body>
+  <!-- Include SweetAlert2 CSS and JS from CDN -->
+  <linkrel
+    ="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</html>

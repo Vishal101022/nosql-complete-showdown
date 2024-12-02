@@ -19,7 +19,7 @@ The expense tracker app allows users to record and categorize their expenses, st
 1. Integrating the Razorpay payment method
 1. Integrating Brevo email service for password recovery
 1. Hashing passwords with bcrypt
-1. Working with Sequelize ORM
+1. Working with Mongoose ORM
 1. How important pagination is 
 1. Implementing transactions to maintain consistency in the database
 1. Utilized AWS S3 for file storage
@@ -31,6 +31,7 @@ The expense tracker app allows users to record and categorize their expenses, st
 ### Prerequisites
 1. **Node version 18.x.x**
 1. **generate JWT secret key**
+1. **setup MongoDB Atlas**
 1. **create razorpay account**
 1. **create Brevo SMPT account**
 1. **create AWS account and get s3**
@@ -42,10 +43,7 @@ git clone https://github.com/Vishal101022/full_stack_expense_app.git
 ### Setup .env file
 ```js
 JWT_SECRET = 
-DB_NAME = 
-DB_USER = 
-DB_PASS = 
-DB_HOST = "localhost"
+MONGODB_URI = 
 PORT = 
 RAZORPAY_KEY_ID = 
 RAZORPAY_KEY_SECRET = 
